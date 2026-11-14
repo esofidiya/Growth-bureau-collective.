@@ -17,11 +17,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
     default: "Growth Bureau Collective",
     template: "%s · Growth Bureau Collective",
   },
-  description: "Growth Bureau Collective.",
+  description: "Where ambition becomes identity. Growth with purpose, influence with intention.",
 };
 
 export const viewport: Viewport = {

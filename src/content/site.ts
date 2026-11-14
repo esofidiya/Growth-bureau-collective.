@@ -4,6 +4,8 @@
  */
 export const site = {
   name: "Growth Bureau Collective",
+  tagline: "Where ambition becomes identity.",
+  pillars: "Growth with purpose. Influence with intention.",
   nav: [
     { label: "Growth Hub", href: "/growth-hub" },
     { label: "Academy", href: "/academy" },
@@ -46,10 +48,11 @@ export const site = {
 } as const;
 
 export const hero = {
-  eyebrow: "Growth Bureau Collective",
-  // PLACEHOLDER COPY: replace with the approved headline from the brief.
-  titleLead: "Growth,",
-  titleAccent: "by design.",
+  // Headline and eyebrow come from the brand lockup artwork.
+  eyebrow: "Growth with purpose · Influence with intention",
+  titleLead: "Where ambition",
+  titleAccent: "becomes identity.",
+  // PLACEHOLDER COPY: replace with the approved intro from the brief.
   intro:
     "Strategy, learning and a private community for founders building with intent — gathered in one place.",
   primary: { label: "Book a consultation", href: "/book" },

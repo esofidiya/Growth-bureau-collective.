@@ -39,12 +39,14 @@ src/
   app/                  routes (App Router)
     [slug]/             "coming soon" pages for routes planned in later phases
   components/
-    brand/GbcEmblem.tsx temporary logo: swap this one file for the real logo
+    brand/GbcEmblem.tsx logo components (monogram, serif watermark, full lockup)
     home/               homepage sections (Hero, GoldParticles)
     layout/             Nav, Footer, ComingSoon
     ui/                 Button, Card, Input/Textarea, Modal, Container/Section
   content/              editable copy (site.ts, planned-pages.ts)
   lib/
+public/brand/           transparent-background logo files (WebP)
+brand-source/           original logo artwork as supplied
 tests/                  Playwright tests
 .claude/skills/         Claude Code skills (ui-ux-pro-max)
 ```

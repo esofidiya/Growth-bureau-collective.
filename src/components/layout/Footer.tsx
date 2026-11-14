@@ -9,10 +9,8 @@ export function Footer() {
       <Container className="grid gap-12 py-16 md:grid-cols-[1.4fr_repeat(3,1fr)]">
         <div className="max-w-xs">
           <GbcWordmark />
-          <p className="mt-5 text-sm leading-relaxed text-smoke">
-            {/* PLACEHOLDER: short brand statement from the brief */}
-            Strategy, learning and community for ambitious founders.
-          </p>
+          <p className="mt-5 font-display text-xl italic text-cream">{site.tagline}</p>
+          <p className="mt-2 text-sm leading-relaxed text-smoke">{site.pillars}</p>
         </div>
         {site.footer.groups.map((group) => (
           <nav key={group.title} aria-label={group.title}>
