@@ -37,14 +37,14 @@ If Playwright can't find a browser, either run `npx playwright install chromium`
 ```
 src/
   app/                  routes (App Router)
-    [slug]/             "coming soon" pages for routes planned in later phases
+    login/, register/   "coming soon" until Phase 3
   components/
     brand/GbcEmblem.tsx logo components (monogram, serif watermark, full lockup)
     home/               homepage sections (Hero, Philosophy, Approach, Services, ...)
     motion/             Reveal (scroll-triggered, reduced-motion aware)
     layout/             Nav, Footer, ComingSoon
     ui/                 Button, Card, Input/Textarea, Modal, Container/Section
-  content/              editable copy: site, home, services, showcase (portfolio/testimonials), planned-pages
+  content/              editable copy: site, home, about, services, packages, academy, insights, showcase
   lib/
 public/brand/           transparent-background logo files (WebP)
 brand-source/           original logo artwork as supplied

@@ -14,7 +14,7 @@ const fieldBase =
 function toneClasses(tone: "dark" | "light", invalid: boolean) {
   if (invalid) return "border-red-400 focus:ring-red-400/40 " + (tone === "dark" ? "bg-ink/60 text-cream" : "bg-white text-charcoal");
   return tone === "dark"
-    ? "border-line-dark bg-ink/60 text-cream focus:border-gold focus:ring-gold/30"
+    ? "border-line-dark bg-ink/60 text-cream [color-scheme:dark] focus:border-gold focus:ring-gold/30"
     : "border-line-light bg-white text-charcoal focus:border-gold-deep focus:ring-gold-deep/25";
 }
 

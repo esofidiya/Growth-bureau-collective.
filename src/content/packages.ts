@@ -104,7 +104,6 @@ export const packageComparison: { feature: string; essentials: boolean | string;
   { feature: "Digital marketing campaigns", essentials: false, elevate: false, elite: true },
   { feature: "Growth consultancy", essentials: false, elevate: "Monthly call", elite: "Roadmap + monthly call" },
   { feature: "Client workspace", essentials: true, elevate: true, elite: true },
-  { feature: "Growth Hub membership", essentials: "Essential", elevate: "Plus", elite: "Elite" },
 ];
 
 export type AddOn = { name: string; description: string; price?: number; priceNote?: string };

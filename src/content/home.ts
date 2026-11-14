@@ -63,7 +63,7 @@ export const whyGbc = {
     },
     {
       title: "Growth beyond the brief",
-      body: "Clients and members get access to the Growth Hub: tools, learning and AI support between sessions.",
+      body: "The Growth Hub gives members tools, learning and AI support to keep building between sessions.",
     },
     {
       title: "Built to scale with you",
