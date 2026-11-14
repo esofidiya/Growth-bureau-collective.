@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Growth Bureau Collective — design tokens
+   Brand palette (from the brief): Black #0B0B0B, Gold #D4A37A, Cream #F8F5F0,
+   Charcoal #242424, White #FFFFFF.
+   gold-deep is a darker gold for text on light backgrounds, because #D4A37A
+   on cream only reaches about 2:1 contrast (WCAG asks for 4.5:1).
+--------------------------------------------------------------------------- */
+@theme {
+  --color-ink: #0b0b0b;
+  --color-gold: #d4a37a;
+  --color-gold-light: #e8c9a8;
+  --color-gold-deep: #8a5f36;
+  --color-cream: #f8f5f0;
+  --color-charcoal: #242424;
+  --color-white: #ffffff;
+  --color-smoke: #a8a29a; /* muted text on dark: ~7.9:1 on ink */
+  --color-stone: #5c564f; /* muted text on light: ~6.9:1 on cream */
+  --color-line-dark: rgb(212 163 122 / 0.18);
+  --color-line-light: rgb(36 36 36 / 0.12);
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --shadow-gold: 0 0 0 1px rgb(212 163 122 / 0.25), 0 20px 60px -20px rgb(212 163 122 / 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  button,
+  [role="button"],
+  a {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(100deg, #b98656 0%, #e8c9a8 45%, #d4a37a 60%, #a8774a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hairline-gold {
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
