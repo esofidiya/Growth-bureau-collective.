@@ -9,6 +9,11 @@ export const site = {
   pillars: "Growth with purpose. Influence with intention.",
   description:
     "Growth Bureau Collective is a premium social media marketing, brand development and digital growth agency for ambitious entrepreneurs, startups and established brands.",
+  contact: {
+    email: "growthbureaucollective@gmail.com",
+    // As supplied by the owner. Double "i" in "Collectiive": confirm spelling.
+    instagram: { handle: "@GrowthBureauCollectiive", url: "https://www.instagram.com/growthbureaucollectiive/" },
+  },
   nav: [
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },

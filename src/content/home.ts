@@ -97,9 +97,9 @@ export const growthHub = {
     { title: "AI Growth Assistant", body: "A strategist, brand consultant and content partner, available any time.", icon: "sparkles" },
     { title: "Community", body: "Connect, ask questions and collaborate with other members.", icon: "users" },
   ],
-  tiers: ["Free", "Plus", "Elite"],
+  tiers: ["Essential", "Plus", "Elite"],
   cta: { label: "Explore the Growth Hub", href: "/growth-hub" },
-  secondary: { label: "Create a free account", href: "/register" },
+  secondary: { label: "View memberships", href: "/growth-hub#membership" },
 } as const;
 
 export const consultationCta = {
