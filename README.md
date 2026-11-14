@@ -40,10 +40,11 @@ src/
     [slug]/             "coming soon" pages for routes planned in later phases
   components/
     brand/GbcEmblem.tsx logo components (monogram, serif watermark, full lockup)
-    home/               homepage sections (Hero, GoldParticles)
+    home/               homepage sections (Hero, Philosophy, Approach, Services, ...)
+    motion/             Reveal (scroll-triggered, reduced-motion aware)
     layout/             Nav, Footer, ComingSoon
     ui/                 Button, Card, Input/Textarea, Modal, Container/Section
-  content/              editable copy (site.ts, planned-pages.ts)
+  content/              editable copy: site, home, services, showcase (portfolio/testimonials), planned-pages
   lib/
 public/brand/           transparent-background logo files (WebP)
 brand-source/           original logo artwork as supplied

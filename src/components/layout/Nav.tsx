@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, Sparkles, X } from "lucide-react";
 import { GbcWordmark } from "@/components/brand/GbcEmblem";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Layout";
@@ -43,8 +43,8 @@ export function Nav() {
           <GbcWordmark />
         </Link>
 
-        <nav aria-label="Main" className="hidden lg:block">
-          <ul className="flex items-center gap-8">
+        <nav aria-label="Main" className="hidden xl:block">
+          <ul className="flex items-center gap-7">
             {site.nav.map((item) => (
               <li key={item.href}>
                 <Link
@@ -58,18 +58,20 @@ export function Nav() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <ButtonLink href={site.signIn.href} variant="ghost" size="sm">
-            {site.signIn.label}
-          </ButtonLink>
-          <ButtonLink href={site.cta.href} size="sm">
-            {site.cta.label}
-          </ButtonLink>
-        </div>
+        <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-2 sm:flex">
+            <ButtonLink href={site.signIn.href} variant="ghost" size="sm">
+              {site.signIn.label}
+            </ButtonLink>
+            <ButtonLink href={site.growthHub.href} size="sm">
+              <Sparkles className="size-4" aria-hidden />
+              {site.growthHub.label}
+            </ButtonLink>
+          </div>
 
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center rounded-sm text-cream lg:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-sm text-cream xl:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -77,12 +79,13 @@ export function Nav() {
         >
           {open ? <X className="size-6" aria-hidden /> : <Menu className="size-6" aria-hidden />}
         </button>
+        </div>
       </Container>
 
       <div
         id="mobile-menu"
         hidden={!open}
-        className="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line-dark bg-ink lg:hidden"
+        className="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line-dark bg-ink xl:hidden"
       >
         <Container className="flex flex-col gap-2 py-8">
           <nav aria-label="Mobile">
@@ -101,7 +104,11 @@ export function Nav() {
             </ul>
           </nav>
           <div className="mt-6 flex flex-col gap-3">
-            <ButtonLink href={site.cta.href} size="lg" onClick={() => setOpen(false)}>
+            <ButtonLink href={site.growthHub.href} size="lg" onClick={() => setOpen(false)}>
+              <Sparkles className="size-4" aria-hidden />
+              {site.growthHub.label}
+            </ButtonLink>
+            <ButtonLink href={site.cta.href} variant="outline" size="lg" onClick={() => setOpen(false)}>
               {site.cta.label}
             </ButtonLink>
             <ButtonLink href={site.signIn.href} variant="outline" size="lg" onClick={() => setOpen(false)}>

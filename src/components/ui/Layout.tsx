@@ -43,12 +43,14 @@ export function Eyebrow({ children, tone = "dark", className }: { children: Reac
 }
 
 export function SectionHeading({
+  id,
   eyebrow,
   title,
   intro,
   tone = "dark",
   align = "left",
 }: {
+  id?: string;
   eyebrow?: string;
   title: ReactNode;
   intro?: ReactNode;
@@ -58,7 +60,7 @@ export function SectionHeading({
   return (
     <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center [&>p:first-child]:justify-center")}>
       {eyebrow && <Eyebrow tone={tone}>{eyebrow}</Eyebrow>}
-      <h2 className="mt-5 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+      <h2 id={id} className="mt-5 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
         {title}
       </h2>
       {intro && (

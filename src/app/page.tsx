@@ -1,6 +1,15 @@
-import { Nav } from "@/components/layout/Nav";
-import { Footer } from "@/components/layout/Footer";
+import { Approach } from "@/components/home/Approach";
+import { ConsultationCta } from "@/components/home/ConsultationCta";
+import { FeaturedServices } from "@/components/home/FeaturedServices";
+import { GrowthHubIntro } from "@/components/home/GrowthHubIntro";
 import { Hero } from "@/components/home/Hero";
+import { Philosophy } from "@/components/home/Philosophy";
+import { PortfolioShowcase } from "@/components/home/PortfolioShowcase";
+import { Process } from "@/components/home/Process";
+import { Testimonials } from "@/components/home/Testimonials";
+import { WhyGbc } from "@/components/home/WhyGbc";
+import { Footer } from "@/components/layout/Footer";
+import { Nav } from "@/components/layout/Nav";
 
 export default function HomePage() {
   return (
@@ -8,7 +17,15 @@ export default function HomePage() {
       <Nav />
       <main id="main" className="flex-1">
         <Hero />
-        {/* The remaining homepage sections from the brief go here. */}
+        <Philosophy />
+        <Approach />
+        <FeaturedServices />
+        <WhyGbc />
+        <Process />
+        <PortfolioShowcase />
+        <GrowthHubIntro />
+        <Testimonials />
+        <ConsultationCta />
       </main>
       <Footer />
     </>

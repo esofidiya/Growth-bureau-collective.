@@ -63,7 +63,7 @@ export function GbcWordmark({ className }: { className?: string }) {
   return (
     <span className={cn("flex items-center gap-3", className)}>
       <GbcEmblem size={36} decorative priority />
-      <span className="flex flex-col leading-none">
+      <span className="flex flex-col whitespace-nowrap leading-none">
         <span className="font-display text-lg font-semibold tracking-[0.08em] text-cream uppercase">Growth Bureau</span>
         <span className="mt-1 text-[0.62rem] font-medium uppercase tracking-[0.42em] text-gold">Collective</span>
       </span>

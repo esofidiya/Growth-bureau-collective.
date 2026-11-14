@@ -50,3 +50,54 @@ test.describe("homepage", () => {
     await ctx.close();
   });
 });
+
+test.describe("homepage sections", () => {
+  test("renders every brief section in order", async ({ page }) => {
+    await page.goto("/");
+    const ids = ["hero-title", "philosophy-title", "approach-title", "services-title", "why-title", "process-title", "portfolio-title", "hub-title", "cta-title"];
+    const tops: number[] = [];
+    for (const id of ids) {
+      const el = page.locator(`#${id}`);
+      await expect(el).toHaveCount(1);
+      tops.push(await el.evaluate((e) => e.getBoundingClientRect().top + window.scrollY));
+    }
+    expect([...tops].sort((a, b) => a - b)).toEqual(tops);
+  });
+
+  test("hero uses the brief's copy and CTAs", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(/where ambition\s*becomes identity\./i);
+    await expect(page.getByRole("link", { name: /Discover Your Growth Potential/ })).toHaveAttribute("href", "/book");
+    await expect(page.getByRole("link", { name: "Explore Our Services" })).toHaveAttribute("href", "/services");
+  });
+
+  test("shows all five services, each linking to its page", async ({ page }) => {
+    await page.goto("/");
+    const cards = page.locator("#services-title").locator("xpath=ancestor::section").locator("ul > li > a");
+    await expect(cards).toHaveCount(5);
+    await cards.first().click();
+    await expect(page).toHaveURL(/\/services\/social-media-management$/);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Social Media Management");
+  });
+
+  test("does not show invented testimonials", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator("#testimonials-title")).toHaveCount(0);
+  });
+
+  test("Growth Hub button is reachable on every screen size", async ({ page, isMobile }) => {
+    await page.goto("/");
+    if (isMobile) await page.getByRole("button", { name: "Open menu" }).click();
+    const nav = isMobile ? page.locator("#mobile-menu") : page.getByRole("banner");
+    await expect(nav.getByRole("link", { name: "Growth Hub" })).toBeVisible();
+  });
+
+  test("header fits on one line at 375px", async ({ browser }) => {
+    const ctx = await browser.newContext({ viewport: { width: 375, height: 812 } });
+    const page = await ctx.newPage();
+    await page.goto("/");
+    const height = await page.getByRole("banner").evaluate((e) => e.getBoundingClientRect().height);
+    expect(height).toBeLessThanOrEqual(80);
+    await ctx.close();
+  });
+});

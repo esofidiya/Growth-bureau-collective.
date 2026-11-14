@@ -48,7 +48,7 @@ export function Hero() {
           <motion.h1
             id="hero-title"
             {...rise(0.25)}
-            className="mt-7 font-display text-[clamp(3rem,7.5vw,6.5rem)] font-semibold leading-[0.92] tracking-tight text-cream"
+            className="mt-7 font-display text-[clamp(2.6rem,6.4vw,5.6rem)] font-semibold uppercase leading-[0.95] tracking-[0.01em] text-cream"
           >
             {hero.titleLead}
             <br />

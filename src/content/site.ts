@@ -1,46 +1,54 @@
 /**
  * Site-wide content. Edit here rather than in components.
- * Routes listed here are built in Phase 2; until then they return 404.
+ * In Phase 9 this moves to the database so admins can edit it.
  */
 export const site = {
   name: "Growth Bureau Collective",
+  shortName: "GBC",
   tagline: "Where ambition becomes identity.",
   pillars: "Growth with purpose. Influence with intention.",
+  description:
+    "Growth Bureau Collective is a premium social media marketing, brand development and digital growth agency for ambitious entrepreneurs, startups and established brands.",
   nav: [
-    { label: "Growth Hub", href: "/growth-hub" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Packages", href: "/packages" },
+    { label: "Portfolio", href: "/portfolio" },
     { label: "Academy", href: "/academy" },
-    { label: "Resources", href: "/resources" },
-    { label: "Community", href: "/community" },
-    { label: "Membership", href: "/membership" },
+    { label: "Insights", href: "/insights" },
+    { label: "Contact", href: "/contact" },
   ],
+  growthHub: { label: "Growth Hub", href: "/growth-hub" },
   cta: { label: "Book a consultation", href: "/book" },
-  signIn: { label: "Sign in", href: "/sign-in" },
+  signIn: { label: "Log in", href: "/login" },
   footer: {
     groups: [
       {
-        title: "Explore",
+        title: "Agency",
         links: [
-          { label: "Growth Hub", href: "/growth-hub" },
-          { label: "Academy", href: "/academy" },
-          { label: "Resource Library", href: "/resources" },
-          { label: "Community", href: "/community" },
+          { label: "About GBC", href: "/about" },
+          { label: "Services", href: "/services" },
+          { label: "Packages & pricing", href: "/packages" },
+          { label: "Portfolio", href: "/portfolio" },
+          { label: "Insights", href: "/insights" },
         ],
       },
       {
-        title: "Collective",
+        title: "Growth Hub",
         links: [
-          { label: "About", href: "/about" },
-          { label: "Membership", href: "/membership" },
+          { label: "The Growth Hub", href: "/growth-hub" },
+          { label: "Learning Academy", href: "/academy" },
+          { label: "Log in", href: "/login" },
+          { label: "Create an account", href: "/register" },
+        ],
+      },
+      {
+        title: "Connect",
+        links: [
           { label: "Book a consultation", href: "/book" },
           { label: "Contact", href: "/contact" },
-        ],
-      },
-      {
-        title: "Legal",
-        // PLACEHOLDER: legal pages need real, reviewed copy before launch.
-        links: [
-          { label: "Privacy", href: "/privacy" },
-          { label: "Terms", href: "/terms" },
+          { label: "Privacy policy", href: "/privacy" },
+          { label: "Terms & conditions", href: "/terms" },
         ],
       },
     ],
@@ -48,13 +56,11 @@ export const site = {
 } as const;
 
 export const hero = {
-  // Headline and eyebrow come from the brand lockup artwork.
   eyebrow: "Growth with purpose · Influence with intention",
   titleLead: "Where ambition",
   titleAccent: "becomes identity.",
-  // PLACEHOLDER COPY: replace with the approved intro from the brief.
   intro:
-    "Strategy, learning and a private community for founders building with intent — gathered in one place.",
-  primary: { label: "Book a consultation", href: "/book" },
-  secondary: { label: "Explore membership", href: "/membership" },
+    "We transform ambitious businesses into influential brands through strategic creativity, digital innovation and purposeful growth.",
+  primary: { label: "Discover Your Growth Potential", href: "/book" },
+  secondary: { label: "Explore Our Services", href: "/services" },
 } as const;
