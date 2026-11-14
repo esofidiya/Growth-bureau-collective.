@@ -93,7 +93,9 @@ Build these real pages, deleting each one's entry from `planned-pages.ts` as you
 12. Add page metadata (title, description, canonical URL) for every page.
 13. Extend the Playwright tests: every nav link reaches a real page, and the forms validate. Run `npm test` and record the results here.
 
-**Questions to ask the owner during Phase 2:** package prices; contact details (email, phone, location, social media accounts); the company story for the About page.
+**Package prices from the owner:** GBC Essentials £299, GBC Elevate £599. Still needed: the Elite price, whether prices are monthly, any setup fee or minimum term, and add-on prices.
+
+**Questions still to ask the owner during Phase 2:** the remaining package details above; contact details (email, phone, location, social media accounts); the company story for the About page.
 
 ## Phase checklist
 
